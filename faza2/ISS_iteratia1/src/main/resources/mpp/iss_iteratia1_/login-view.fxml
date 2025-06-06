@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpp.iss_iteratia1_.controller.LoginController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="400.0" prefWidth="350.0" spacing="20.0" style="-fx-background-color: #f0f0f0;">
+            <children>
+                <Label text="Theater Reservation System" textAlignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <VBox alignment="CENTER" spacing="15.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                    <children>
+                        <Label text="Login" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <VBox spacing="10.0">
+                            <children>
+                                <Label text="Username:" />
+                                <TextField fx:id="usernameField" prefWidth="200.0" promptText="Enter your username" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="10.0">
+                            <children>
+                                <Label text="Password:" />
+                                <PasswordField fx:id="passwordField" prefWidth="200.0" promptText="Enter your password" />
+                            </children>
+                        </VBox>
+                        <Label fx:id="errorLabel" style="-fx-text-fill: red;" text="Error message" visible="false" wrapText="true" />
+                        <Button fx:id="loginButton" mnemonicParsing="false" onAction="#handleLogin" prefWidth="120.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 5;" text="Login">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                    </padding>
+                </VBox>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </VBox>
+    </children>
+</VBox>

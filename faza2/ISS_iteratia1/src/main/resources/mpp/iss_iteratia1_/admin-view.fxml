@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="mpp.iss_iteratia1_.controller.AdminPlayController"
+      spacing="10" alignment="TOP_CENTER" padding="20">
+
+    <Label text="Admin - Adaugă Spectacol Nou" font="$x1">
+        <font>
+            <Font size="20" />
+        </font>
+    </Label>
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="Nume Spectacol:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="playNameField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Data și Ora:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <DatePicker fx:id="datePicker" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Ora (HH:mm):" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="timeField" promptText="ex: 19:30" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="Descriere:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextArea fx:id="descriptionField" prefRowCount="4" prefColumnCount="20" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    </GridPane>
+
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="Adaugă Spectacol" fx:id="addPlayButton" onAction="#handleAddPlay"/>
+        <Button text="Curăță" onAction="#handleClear"/>
+    </HBox>
+
+    <Label fx:id="statusLabel" textFill="red" font="$x2" />
+
+</VBox>
